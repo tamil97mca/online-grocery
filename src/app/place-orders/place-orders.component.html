@@ -1,0 +1,64 @@
+<h3 class="text-center mb-5">Check Order Status</h3>
+
+<form [formGroup]="statusFilterForm">
+
+    <div class="text-center">
+
+        <input type="radio" value="ALL" [checked]="true" name="status" id="status" formControlName="status"
+            (change)="statusFilter()"> &nbsp;
+        <label for="delivered">All</label>
+
+        <input type="radio" value="DELIVERED" name="status" class="ml-5" id="status" formControlName="status"
+            (change)="statusFilter()"> &nbsp;
+        <label for="delivered">Delivered</label>
+
+        <input type="radio" value="CANCELLED" name="status" class="ml-5" id="status" formControlName="status"
+            (change)="statusFilter()"> &nbsp;
+        <label for="delivered">Cancelled</label>
+
+        <input type="radio" value="ORDERED" name="status" class="ml-5" id="status" formControlName="status"
+            (change)="statusFilter()"> &nbsp;
+        <label for="delivered">Ordered</label>
+
+        <input type="radio" value="SHIPPED" name="status" class="ml-5" id="status" formControlName="status"
+            (change)="statusFilter()"> &nbsp;
+        <label for="delivered">Shipped</label>
+    </div>
+
+</form>
+
+<div>
+    <table class="table table-bordered table-hover" aria-describedby="mydesc">
+        <thead appItemAddedToCart>
+            <tr>
+                <th scope="col">S.no</th>
+                <th scope="col">Items</th>
+                <th scope="col">CreatedBy By</th>
+                <th scope="col">Updated On</th>
+                <th scope="col">Bill Amount</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let place of searchOrderResults; let i=index;">
+                <tr>
+                    <td>{{i+1}}</td>
+                    <td>
+                        <ul class="text-center unorderedlist">
+                            <li *ngFor="let item of place.items">
+                                {{item.productName}} - {{item.unit}} - Rs. {{item.price}} - Rs. {{item.totalPrice}}
+                            </li>
+                        </ul>
+                    </td>
+                    <td>{{place.createdBy}}</td>
+                    <td>{{place.date | date: "dd-MMM-yyyy"}}</td>
+                    <td>Rs. {{place.totalBillAmount}}</td>
+                    <td> <span class="status-badge" [style.background-color]="getStyle(place.status)" >{{place.status}}</span> </td>
+                    <td><a class="badge" *ngIf="place.status == 'ORDERED'" 
+                        (click)="changeShipped(place)"><button class="btn btn-primary">Shipped</button></a> &nbsp;<a class="badge" *ngIf="place.status == 'SHIPPED'" 
+                            (click)="changeDelivered(place)"><button class="btn btn-primary">Deliver</button></a> &nbsp; <a *ngIf="place.status == 'ORDERED'"
+                             (click)="changeCancelled(place)"><button class="btn btn-danger">Cancel</button></a></td>
+                </tr>
+        </tbody>
+    </table>
+</div>

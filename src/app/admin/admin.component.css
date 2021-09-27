@@ -1,0 +1,123 @@
+.form-group
+{
+    margin: auto;
+    width: 240px;
+    text-align: center;
+    color: rgb(17, 17, 17);
+
+}
+h1
+{
+    text-align: center;
+    color: rgb(7, 7, 7);
+    padding-top: 30px;
+}
+.text-center
+{
+    color: rgb(22, 21, 22);
+    padding-bottom: 25px;
+}
+form
+{
+    background: white;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 130px;
+    border-radius: 20px;
+}
+label
+{
+    padding-top: 20px;
+    color: #B4D233;
+}
+.btn
+{
+    border-radius: 25px;
+    background: #B4D233;
+    margin: 5px;
+
+}
+.btn:hover
+{
+    font-size: 16px;
+}
+img
+{
+    margin-left: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.form-control
+{
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-color: #B4D233;
+}
+sup
+{
+    color: red;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  #myVideo {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .content {
+    position: fixed;
+    bottom: 0;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 110px;
+    margin-left: 30px;
+  }
+  
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+
+.forgot
+{
+    text-decoration: none;
+}
+.danger
+{
+    color: red;
+    font-size: 12px;
+    --padding: -10px !important;
+}
+.skip
+{
+    margin-top: -15px;
+}
+.log
+{
+    margin-top: -20px;
+}

@@ -1,0 +1,59 @@
+{
+"Fruits" :[
+	{"productName" : "Apple", "unit" : 1, "price" : 120, "imgUrl" : "fruits/apple.png", "type":"kg"},
+	{"productName" : "Pomegranate", "unit" : 1, "price" : 80, "imgUrl" : "fruits/pomegranate.png", "type":"kg"},
+	{"productName" : "Strawberry", "unit" : 1, "price" : 340, "imgUrl" : "fruits/strawberry.png", "type":"kg"},
+	{"productName" : "PineApple", "unit" : 1, "price" : 40, "imgUrl" : "fruits/pineapple.png", "type":"kg"},
+	{"productName" : "Lime", "unit" : 1, "price" : 70, "imgUrl" : "fruits/lime.png", "type":"kg"},
+	{"productName" : "Banana", "unit" : 1, "price" : 40, "imgUrl" : "fruits/banana.png", "type":"kg"}
+]
+,
+"Cookies" :[
+	{"productName" : "Black Bourbon", "unit" : 1, "price" : 10, "imgUrl" : "cookies/bourbon.png", "type":"Pc"},
+	{"productName" : "Happy Happy", "unit" : 1, "price" : 10, "imgUrl" : "cookies/happyhappy.png", "type":"Pc"},
+	{"productName" : "Milk Sakthi", "unit" : 1, "price" : 10, "imgUrl" : "cookies/milksakthi.png", "type":"Pc"},
+	{"productName" : "20-20", "unit" : 1, "price" : 10, "imgUrl" : "cookies/2020.png", "type":"Pc"},
+	{"productName" : "Coconut", "unit" : 1, "price" : 10, "imgUrl" : "cookies/coconut.png", "type":"Pc"},
+	{"productName" : "Monaco", "unit" : 1, "price" : 10, "imgUrl" : "cookies/monaco.png", "type":"Pc"}
+],
+"Soft Drinks" : [
+	{"productName" : "Coca Cola", "unit" : 1, "price" : 75, "imgUrl" : "softdrinks/cocacola.png", "type":"Ltr"},
+	{"productName" : "Pepsi", "unit" : 1, "price" : 60, "imgUrl" : "softdrinks/pepsi.png", "type":"Ltr"},
+	{"productName" : "Fanta", "unit" : 1, "price" : 45, "imgUrl" : "softdrinks/fanta.png", "type":"Ltr"},
+	{"productName" : "Sprite", "unit" : 1, "price" : 60, "imgUrl" : "softdrinks/sprite.png", "type":"Ltr"},
+	{"productName" : "Orangina", "unit" : 1, "price" : 70, "imgUrl" : "softdrinks/orangina.png", "type":"Ltr"},
+	{"productName" : "Brahma", "unit" : 1, "price" : 50, "imgUrl" : "softdrinks/brahma.png", "type":"Ltr"}
+],
+"Vegetables" : [
+	{"productName" : "Carrot", "unit" : 1, "price" : 90, "imgUrl" : "vegetables/carrot.png", "type":"kg"},
+	{"productName" : "Tomato", "unit" : 1, "price" : 30, "imgUrl" : "vegetables/tomato.png", "type":"kg"},
+	{"productName" : "Garlic", "unit" : 1, "price" : 150, "imgUrl" : "vegetables/garlic.png", "type":"kg"},
+	{"productName" : "Chilli", "unit" : 1, "price" : 80, "imgUrl" : "vegetables/chilli.png", "type":"kg"},
+	{"productName" : "Onion", "unit" : 1, "price" : 130, "imgUrl" : "vegetables/onion.png", "type":"kg"},
+	{"productName" : "Potato", "unit" : 1, "price" : 50, "imgUrl" : "vegetables/potato.png", "type":"kg"}
+],
+"Dry Fruits" : [
+	{"productName" : "Almond", "unit" : 1, "price" : 670, "imgUrl" : "dryfruits/almond.png", "type":"kg"},
+	{"productName" : "Cashew", "unit" : 1, "price" : 850, "imgUrl" : "dryfruits/cashew.png", "type":"kg"},
+	{"productName" : "Dates", "unit" : 1, "price" : 250, "imgUrl" : "dryfruits/dates.png", "type":"kg"},
+	{"productName" : "Grape", "unit" : 1, "price" : 550, "imgUrl" : "dryfruits/grape.png", "type":"kg"},
+	{"productName" : "Walnuts", "unit" : 1, "price" : 750, "imgUrl" : "dryfruits/walnuts.png", "type":"kg"},
+	{"productName" : "Cardamom", "unit" : 1, "price" : 500, "imgUrl" : "dryfruits/cardamom.png", "type":"kg"}
+],
+"Spicy Chips" :[
+	{"productName" : "Parle's Piri Piri", "unit" : 1, "price" : 10, "imgUrl" : "spicy/piripiri.png", "type":"Pc"},
+	{"productName" : "Parle's Aloo Chat", "unit" : 1, "price" : 10, "imgUrl" : "spicy/wafers.png", "type":"Pc"},
+	{"productName" : "Mexitos", "unit" : 1, "price" : 10, "imgUrl" : "spicy/mexitos.png", "type":"Pc"},
+	{"productName" : "Namkeen", "unit" : 1, "price" : 10, "imgUrl" : "spicy/namkeen.png", "type":"Pc"},
+	{"productName" : "Rancheritos", "unit" : 1, "price" : 10, "imgUrl" : "spicy/rancheritos.png", "type":"Pc"},
+	{"productName" : "Potato Chips", "unit" : 1, "price" : 10, "imgUrl" : "spicy/potatochips.png", "type":"Pc"}
+],
+"Vegetable Oils" : [
+	{"productName" : "Fortune Sun Lite", "unit" : 1, "price" : 200, "imgUrl" : "oils/fortune.png", "type":"Ltr"},
+	{"productName" : "Fortune Xpert", "unit" : 1, "price" : 230, "imgUrl" : "oils/blue.png", "type":"Ltr"},
+	{"productName" : "Fortune Mustard Oil", "unit" : 1, "price" : 270, "imgUrl" : "oils/red.png", "type":"Ltr"},
+	{"productName" : "Fortune Cotton Lite", "unit" : 1, "price" : 190, "imgUrl" : "oils/skyblue.png", "type":"Ltr"},
+	{"productName" : "Fortune Pro Immunity", "unit" : 1, "price" : 210, "imgUrl" : "oils/orange.png", "type":"Ltr"},
+	{"productName" : "Fortune Soya Health Oil", "unit" : 1, "price" : 290, "imgUrl" : "oils/green.png", "type":"Ltr"}
+]
+}

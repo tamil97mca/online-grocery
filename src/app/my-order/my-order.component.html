@@ -1,0 +1,49 @@
+<section>
+  <h3 class="text-center mb-3">My Order Status</h3>
+
+<div class="text-center mb-3">
+  <label id="email"> <i class="fas fa-user-tie" aria-hidden="true"></i> &nbsp;
+      <strong><em>{{this.userEmail.email}}</em></strong></label>
+</div>
+
+ <div class="container-fluid">
+  <table class="table table-bordered table-hover" aria-describedby="mydesc">         
+      <thead>
+         <tr>
+            <th scope="col">S.no</th>
+            <th scope="col">Items</th>
+            <th scope="col">Ordered By</th>
+            <th scope="col">Ordered Date</th>
+            <th scope="col">Bill Amount</th>
+            <th scope="col">Comments</th>
+            <th scope="col">Status</th>
+            <th scope="col">Updated On</th>
+            <th scope="col">Action</th>
+         </tr>
+      </thead>
+      <tbody *ngFor="let place of descPlaceOrderList; let i=index;">
+         <tr>
+            <td>{{i+1}}</td>
+            <td>
+                <ul class="text-center unorderedlist">
+                    <li *ngFor="let item of place.items">
+                        {{item.productName}} - {{item.unit}} - Rs. {{item.price}} - Rs. {{item.totalPrice}}
+                    </li>
+                </ul>
+            </td>
+            <td>{{place.createdBy}}</td>
+            <td>{{place.date | date: "dd-MMM-yyyy"}}</td>
+            <td>Rs. {{place.totalBillAmount}}</td>
+            <td class="text-wrap">{{place.comments}}</td>
+            <td><span class="badge" [style.background-color]="getStyle(place.status)">{{place.status}}</span></td>
+  
+            <td *ngIf="place.status=='CANCELLED'"> {{place.cancelledDate | date : "dd-MMM-yyyy"}} <br> {{place.cancelledDate | date : "hh:mm:ss a"}} </td>
+            <td *ngIf="place.status!='CANCELLED'"> {{place.deliveredDate | date : "dd-MMM-yyyy"}} <br> {{place.deliveredDate | date : "hh:mm:ss a"}}</td>
+  
+            <td *ngIf="place.status=='ORDERED' || place.status=='SHIPPED'"><a class="badge" (click)="changeCancelled(place)"><button class="btn btn-primary">Cancel</button></a></td>
+  
+         </tr>
+      </tbody>
+  </table>
+ </div>
+</section>

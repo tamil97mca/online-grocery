@@ -1,0 +1,33 @@
+<section>
+  <h3 class="text-center mb-5">Product Remove to List</h3>
+
+<div class="text-center mb-5 form-group">
+  <input type="text" name="category" class="form-control" id="category" autofocus [(ngModel)]="selectedCategory" placeholder="        Search Ex: apple">
+</div>
+
+
+<table class="table table-bordered table-hover"aria-describedby="mydesc">
+  <thead appItemAddedToCart>
+     <tr>
+      <th scope="col">S.no</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Price</th>
+      <th scope="col">Images</th>
+      <th scope="col">Category</th>
+      <th scope="col">Action</th>
+     </tr>
+  </thead>
+  <tbody *ngFor="let list of (ascProductList | category:selectedCategory); let i=index">
+     <tr>
+      <td>{{i+1}}</td>
+      <td>{{list.name}}</td>
+      <td>{{list.stock}} {{list.type}}</td>
+      <td>{{list.price}}</td>
+      <td><img src="data:image/png;base64,{{list._attachments.image.data}}" width="100" height="100"/></td>
+      <td>{{list.category}}</td>
+      <td><a class="badge" (click)="removeProduct(list._id, list._rev)"><button type="button" class="btn btn-warning"><i style="color:black" class="fas fa-trash-alt"></i> Delete</button></a></td>
+     </tr>
+  </tbody>
+</table>
+</section>

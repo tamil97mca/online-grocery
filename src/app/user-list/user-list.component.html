@@ -1,0 +1,27 @@
+<section>
+  <h3 class="text-center mb-5">List of Users</h3>
+<table aria-describedby="mydesc" class="table table-bordered table-hover">
+  <thead appItemAddedToCart>
+     <tr>
+      <th scope="col">S.no</th>
+      <th scope="col">User Name</th>
+      <th scope="col">Mobile Number</th>
+      <th scope="col">Email Address</th>
+      <th scope="col">Register Date</th>
+      <th scope="col">Account Status</th>
+      <th scope="col">Action</th>
+     </tr>
+  </thead>
+  <tbody *ngFor = "let users of userDataList; let i = index">
+     <tr>
+      <td>{{i+1}}</td>
+      <td>{{users.name}}</td>
+      <td>{{users.mobileNo}}</td>
+      <td>{{users.email}}</td>
+      <td>{{users.registerDate | date : "dd-MMM-yyyy hh:mm:ss a"}}</td>
+      <td>{{users.account}}</td>
+      <td><a class="badge" *ngIf="users.account === 'active'" (click)="changeUserStatus(users)" ><button class="btn btn-secondary">Deactive</button></a></td>
+     </tr>
+  </tbody>
+</table>
+</section>

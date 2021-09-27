@@ -1,0 +1,52 @@
+<section>
+  <video autoplay muted loop id="myVideo" preload="metadata">
+    <source src="assets/video/loginvideo.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  
+  <div class="content">
+  
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+  
+      <img src="assets/images/logo/dplogo.png" alt="logo" width="60%" height="60%">
+  
+      <div class="form-group">
+        <label for="username">UserName <sup>*</sup></label>
+        <input formControlName="username" class="form-control" type="text" name="username" id="username"
+          pattern="[a-zA-Z]{3,20}" placeholder="Enter name" autofocus autocomplete="off" required>
+        <span *ngIf="registerForm.controls.username.errors && registerForm.controls.username.dirty" class="danger"
+          padding>Username is not valid.</span>
+      </div>
+  
+      <div class="form-group">
+        <label for="phone">Phone No <sup>*</sup></label>
+        <input formControlName="phoneno" class="form-control" type="tel" name="phoneno" id="phoneno"
+          pattern="[9876][0-9]{9}" placeholder="Enter phone no" maxlength="10" minlength="10" autocomplete="off" required>
+        <span *ngIf="registerForm.controls.phoneno.errors && registerForm.controls.phoneno.dirty" class="danger"
+          padding>Phone No is not valid.</span>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email <sup>*</sup></label>
+        <input formControlName="email" class="form-control" type="email" name="email" id="email"
+          title="Email must be a valid email address" placeholder="Enter email address" autocomplete="off" required>
+        <span *ngIf="registerForm.controls.email.errors && registerForm.controls.email.dirty" class="danger" padding>Email
+          No is not valid.</span>
+      </div>
+  
+      <div class="form-group">
+        <label for="psw">Password <sup>*</sup></label>
+        <input formControlName="password" class="form-control" type="password" name="password" id="password"
+          placeholder="Enter password" minlength="6" maxlength="8" autocomplete="off" required>
+        <span *ngIf="registerForm.controls.password.errors && registerForm.controls.password.dirty" class="danger"
+          padding>Password No is not valid.</span>
+      </div>
+  
+      <div class="text-center log">
+        <a href="/auth/login" routerLink="/auth/login">Login</a> &nbsp; <button class="btn" type="submit"
+          [disabled]="!registerForm.valid">Register</button>&nbsp; <a routerLink="/home" href="/home">Skip</a>
+      </div>
+  
+    </form>
+  </div>
+</section>

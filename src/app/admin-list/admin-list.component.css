@@ -1,0 +1,46 @@
+table
+{
+  width: 100%;
+  text-align: center;
+}
+form
+{
+  padding: 20px;
+}
+.addProductForm
+{
+  width: 30%;
+  margin: 0 auto;
+}
+.form-control
+{
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+select
+{
+  padding: 7px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  border-color: gainsboro;
+  margin-top: 20px;
+}
+.Panel
+{
+  background: lavender !important;
+}
+h3
+{
+  padding-top: 20px;
+  color: mediumseagreen;
+}
+.thead2 > th
+{
+  width: 15%;
+}
+.unorderedlist
+{
+  list-style-type: decimal;
+  list-style-position: inside;
+}

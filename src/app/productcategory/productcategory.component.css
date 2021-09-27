@@ -1,0 +1,29 @@
+.selected-item{
+    background-color:red;
+}
+.add
+{
+    background: mediumseagreen;
+    border-color: mediumseagreen;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 3px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+    line-height: 0.5;
+}
+.add:hover
+{
+    background: slategray;
+    color: white;
+    text-decoration: none;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }

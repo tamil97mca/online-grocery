@@ -1,0 +1,239 @@
+@import '~ngx-toastr/toastr';
+
+
+
+*
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.brands
+{
+    text-align: justify;
+    padding: 10px;
+}
+.pay
+{
+    text-align: center;
+    color: mediumseagreen;
+    font-size: 35px;
+}
+
+.im:hover
+{
+    width: 180px;
+    height: 180px;
+}
+.soft
+{
+    margin-bottom: 40px;
+}
+.drinks
+{
+    margin-top: 20px;
+}
+.pay:hover
+{
+    width: 35%;
+    height: 35%;
+}
+.paypal:hover
+{
+    width: 45%;
+    height: 45%;
+}
+.add
+{
+    background: mediumseagreen;
+    border-color: mediumseagreen;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 3px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+}
+.add:hover
+{
+    background: slategray;
+    color: white;
+    text-decoration: none;
+}
+
+a[routerLink] {
+    cursor: pointer;
+}
+
+.navbar-brand:hover
+{
+    padding: 5px;
+}
+#logoname
+{
+    color: mediumseagreen;
+    font: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#logoname:hover
+{
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#liname
+{
+    color: mediumseagreen;
+    font: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#liname:hover
+{
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.card
+{
+    text-align: center;
+    color: slategray;
+    border-radius: 50px;
+}
+.card:hover
+{
+    background: mediumseagreen;
+    color: white;
+    border-top-right-radius: 220px;
+    border-bottom-left-radius: 220px;
+    border-bottom-right-radius: 220px;
+}
+@media screen and (max-width: 600px)
+{
+    .card:hover
+    {
+        border-radius: 100px;
+        background: mediumseagreen;
+        color: white;
+    }
+}
+h1,h2,h3
+{
+    color: black;
+    font: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.truck:hover
+{
+    opacity: 0.6;
+}
+@media screen and (max-width: 600px)
+{
+    .truck{
+        width: 100%;
+        height: 100%;
+    }
+}
+p
+{
+    color: slategray;
+}
+ul
+{
+    text-align: justify;
+    list-style-type: none;
+}
+.icon
+{
+    text-align: center;
+    color: mediumseagreen;
+    font-size: 30px;
+}
+.iconpara
+{
+    font-size: 14px;
+}
+.icon:hover
+{
+    font-size: 50px;
+}
+.details
+{
+    text-align: center;
+}
+.growth
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.imgrid
+{
+    background: blueviolet;
+    text-align: center;
+}
+.road
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.roadpara:hover
+{
+    font-size: 20px;
+}
+#addr
+{
+    font-style: italic;
+
+}
+#addr:hover
+{
+    font-size: 20px;
+    color: slategray;
+}
+#thank
+{
+    font-family: 'Brush Script MT', cursive;;
+    color: mediumseagreen;
+    text-align: center;
+}
+.circle
+{
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 20px;
+    width: 10%;
+    height: 10%;
+}
+@media screen and (max-width: 600px)
+{
+    .circle{
+        width: 30%;
+        height: 30%;
+    }
+}
+.founder
+{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.pioneers
+{
+    margin-top: 50px;
+}
+body {
+    font-family: '"Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif'; 
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

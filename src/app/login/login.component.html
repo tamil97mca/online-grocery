@@ -1,0 +1,56 @@
+<section>
+  <video autoplay muted loop id="myVideo" preload="metadata">
+    <source src="assets/video/logvideo.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  
+  <div class="content">
+  
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+  
+      <img src="assets/images/logo/dplogo.png" alt="logo" width="60%" height="60%">
+  
+      <div class="form-group">
+        <label for="email">Email <sup>*</sup></label>
+        <input class="form-control" formControlName="email" type="email" name="email" id="email" autofocus
+          placeholder="Enter email address" autocomplete="off" required>
+        <p *ngIf="loginForm.controls.email.errors && loginForm.controls.email.dirty" class="danger" padding>Email is not
+          valid.</p>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password <sup>*</sup></label>
+        <input class="form-control" formControlName="password" type="password" name="password" id="password" minlength="6"
+          maxlength="8" placeholder="Enter password" autocomplete="off" required>
+        <p *ngIf="loginForm.controls.password.errors && loginForm.controls.password.dirty" class="danger" padding>Password
+          is not valid.</p>
+      </div>
+  
+      <!-- <div class="text-center">
+        <input formControlName="remember" type="checkbox" name="remember" id="remember"> &nbsp;
+        <label for="remember rem">Remember</label>
+      </div> -->
+
+
+     <div class="text-center">
+      <input type="radio" formControlName="role" value="admin" name="role" class="ml-5" id="role" required> &nbsp;
+      <label for="delivered">Admin</label>
+
+      <input type="radio" formControlName="role" value="user" name="role" class="ml-5" id="role" required> &nbsp;
+      <label for="delivered">User</label>
+     </div>
+
+
+
+      <div class="text-center log">
+        <button class="btn" type="submit" [disabled]="!loginForm.valid">Login</button>
+      </div>
+  
+      <div class="text-center skip">
+        <span><a class="forgot" routerLink="/auth/register">Register</a></span> &nbsp; <a href="/home"
+          routerLink="/home">Skip</a>
+      </div>
+  
+    </form>
+  </div>
+</section>

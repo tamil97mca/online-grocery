@@ -1,0 +1,49 @@
+<section>
+  <div class="container-fluid">
+      <h3 class="text-center">Order Now</h3>
+      <div class="text-center">
+          <label id="email"> <i class="fas fa-user-tie" aria-hidden="true"></i> &nbsp;
+              <strong><em>{{this.user.email}}</em></strong></label>
+      </div>
+  
+      <table class="table table-bordered table-hover" aria-describedby="mydesc">
+          <thead>
+              <tr >
+                  <th scope="col">S.no</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">Qty</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Total Price</th>
+                  <th scope="col">Action</th>
+              </tr>
+          </thead>
+          <tbody id="table">
+              <tr *ngFor="let item of cartItems;let i=index">
+                  <td>{{i+1}}</td>
+                  <td>{{item.productName}}</td>
+                  <td><input type="number" [(ngModel)]="cartItems[i].unit" (change)="updatePrice(i,item.stock)" max="{{item.stock}}" min="1">
+                  </td>
+                  <td>{{item.price}}</td>
+                  <td>{{item.totalPrice}}</td>
+                  <td><a class="badge" (click)="removeItem(i)"><button class="btn btn-danger">Delete</button></a></td>
+              </tr>
+  
+          </tbody>
+          <tfoot>
+              <tr>
+                  <th scope="row" colspan="4">Total Amount</th>
+                  <th scope="row">Rs.{{totalBillAmount}}</th>
+              </tr>
+          </tfoot>
+      </table>
+      <div class="text-center">
+          <button class="btn action btn-secondary" type="button" (click)="orderMore()" routerLink="/home"> <i
+                  class="fas fa-backward" aria-hidden="true"></i> Order More</button>
+          <button class="btn action btn-danger" type="button" [disabled]="cartItems.length==0" (click)="emptyCart()"> <i
+                  class="fas fa-trash" aria-hidden="true"></i> Empty Cart</button>
+          <button class="btn action btn-primary" type="button" [disabled]="cartItems.length==0" (click)="confirmOrder()"> <i
+                  class="fas fa-check-circle" aria-hidden="true"></i> Confirm Order</button>
+      </div>
+  
+  </div>
+</section>

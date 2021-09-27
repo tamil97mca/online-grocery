@@ -1,0 +1,38 @@
+<section>
+  <div class="container">
+
+      <div *ngFor="let category of categories | keyvalue">
+  
+          <h3 class="text-center mt-5">{{category.key}}</h3>
+          <div class="text-right">
+              <button class="btn btn-primary btn-sm" role="button" (click)="view(category.key)">view all</button>
+          </div>
+  
+          <div class="row">
+              <!-- <div appItemAddedToCart>Items Directive</div> -->
+  
+              <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4" *ngFor="let productItem of getProductItems(category.key)">
+                  <div class="zoom" *ngIf="productItem.stock != 0"><img src="data:image/png;base64,{{productItem._attachments.image.data}}" width="150px" alt="Product Image" height="150px" />
+                      <figcaption>{{productItem.name}}</figcaption>
+                      <p>Stock : {{productItem.stock}}</p>
+                      <p>{{productItem.unit}} {{productItem.type}} - <i class="fas fa-rupee-sign" aria-hidden="true"></i>
+                          {{productItem.price}}</p>
+                      <button type="button" (click)="addCart(productItem._id, productItem._rev, productItem.name, productItem.unit, productItem.type, productItem.price, productItem.stock, productItem.category, productItem.imageUrl, productItem.type)"
+                          class="add btn btn-md btn-block" [class.selected-item] = "isItemAdded(productItem.name)" 
+                          [disabled]="isItemAdded(productItem.name)">{{isItemAdded(productItem.name)?"Added":"Add"}}</button>
+                  </div>
+              </div>
+  
+          </div>
+      </div>
+  </div>
+</section>
+
+<ngx-spinner
+bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#fff"
+type="ball-scale-multiple"
+>
+<p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>

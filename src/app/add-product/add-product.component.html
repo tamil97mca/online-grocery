@@ -1,0 +1,57 @@
+<section>
+  <h3 class="text-center mb-5">Add Product to List</h3>
+<form [formGroup]="addProductForm" (ngSubmit)="addProduct()" class="addProductForm">
+  <div class="form-group">
+      <label for="productName">Product Name</label>
+      <input type="text" [(ngModel)]="productName" formControlName="productName" class="form-control" name="productName" id="productName"
+          required>
+  </div>
+  <div class="form-group">
+      <label for="unit">Unit</label>
+      <input formControlName="unit" class="form-control" type="number" name="unit" id="unit"  min="1" required>
+  </div>
+  <div class="form-group">
+      <select name="type" id="type" formControlName="type" required>
+          <option value="" disabled hidden>Select Product Type</option>
+          <option value="Kg">Kg</option>
+          <option value="Pc">Pc</option>
+          <option value="Ltr">Ltr</option>
+      </select>
+  </div>
+  <div class="form-group">
+      <select name="category" id="category" formControlName="category" required>
+          <option value="" disabled hidden>Select Product category</option>
+          <option value="Fruits">Fruits</option>
+          <option value="Cookies">Cookies</option>
+          <option value="Soft Drinks">Soft Drinks</option>
+          <option value="Vegetables">Vegetables</option>
+          <option value="Dry Fruits">Dry Fruits</option>
+          <option value="Spicy Chips">Spicy Chips</option>
+          <option value="Vegetable Oils">Vegetable Oils</option>
+
+      </select>
+  </div>
+  <div class="form-group">
+      <label for="price">Price</label>
+      <input formControlName="price" type="number" class="form-control" name="price" id="price" required>
+  </div>
+
+  <div class="form-group">
+      <label for="stock">Stock</label>
+      <input formControlName="stock" type="number" class="form-control" name="stock" id="stock" min="1" required>
+  </div>
+
+  <div class="form-group">
+      <label for="imgUrl">Image Url</label>
+      <!-- <input formControlName="imgUrl" type="text" class="form-control" name="imgUrl" id="imgUrl" required> -->
+      <input type="file" formControlName="imgUrl" name="imgUrl" (change)="onSelect($event)" id="imgUrl">
+  </div>
+  <div class="text-center">
+      <button class="btn btn-primary" [disabled]="!addProductForm.valid" type="submit" >Submit</button>
+  </div>
+</form>
+
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "triangle-skew-spin" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+</section>
+
+

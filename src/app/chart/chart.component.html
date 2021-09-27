@@ -1,0 +1,21 @@
+<div class="clearfix">
+
+  <div class="chart-wrapper" class="box">
+
+      <h3 class="text-center mt-5 mb-3">New Register User</h3>
+
+      <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+          [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+      </canvas>
+  </div>
+
+  <div class="chart-wrapper" class="box">
+
+    <h3 class="text-center mt-5 mb-3">Sales Report <sub><small>(Last Five Days)</small></sub></h3>
+
+   <app-sales-chart></app-sales-chart>
+
+  </div>
+  
+
+</div>
