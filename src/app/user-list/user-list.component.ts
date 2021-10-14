@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-user-list',
@@ -32,8 +33,9 @@ export class UserListComponent implements OnInit {
   
   
       this.userService.userList(userList).then((res: any) => {
-        this.userDataList = res.records.docs;
+        this.userDataList = _.orderBy(res.records.docs, ['registerDate'], ['desc']);
         console.log("datalist", this.userDataList);
+
       }, err => {
         alert("Something went wrong");
       })
@@ -45,7 +47,7 @@ export class UserListComponent implements OnInit {
   }
 
 
-  changeUserStatus(users : any)
+  changeUserStatusDeactive(users : any)
   {
 
     try {
@@ -68,4 +70,27 @@ export class UserListComponent implements OnInit {
     }
 
     
+
+    changeUserStatusActive(users : any)
+  {
+
+    try {
+
+      console.table(users.account);    
+      users.account = "active";
+      users.role = "user";
+  
+      this.userService.userAccountStatus(users).then((result : any) => {
+        console.log("status change result", result);    
+        this.userList();  
+      }, err => {
+        alert("Account Status Change Error")
+      })
+  
+    }
+    catch(err) {
+      console.error("error", err);
+    }
+    }
+
 }

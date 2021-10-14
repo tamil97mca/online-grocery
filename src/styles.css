@@ -130,7 +130,7 @@ a[routerLink] {
 }
 h1,h2,h3
 {
-    color: black;
+    color: mediumseagreen;
     font: bolder;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -147,7 +147,7 @@ h1,h2,h3
 }
 p
 {
-    color: slategray;
+    color: black;
 }
 ul
 {

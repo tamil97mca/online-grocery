@@ -148,7 +148,7 @@ export class ChartComponent implements OnInit {
       console.log("data",row);
       let docs = row.map((obj: any) => obj.deliveredDate);
       this.deliveredDates = docs;
-      console.table(this.deliveredDates);
+      console.log("today",this.deliveredDates);
     
 // today sales count
     let todaySalesCount = 0;
@@ -161,7 +161,7 @@ export class ChartComponent implements OnInit {
         todaySalesList.push(day);
       }   
     }
-    console.table(todaySalesCount);    
+    // console.table(todaySalesCount);    
     // end
     
     // last week sales count
@@ -177,7 +177,7 @@ export class ChartComponent implements OnInit {
         lastWeekSalesList.push(week);
       }   
     }
-    console.table(lastWeekSalesCount);
+    // console.table(lastWeekSalesCount);
     // end
 
 
@@ -194,7 +194,7 @@ export class ChartComponent implements OnInit {
          lastMonthSalesList.push(month);
        }   
      } 
-     console.table(lastMonthSalesCount);
+    //  console.table(lastMonthSalesCount);
      // end
 
 
@@ -211,7 +211,7 @@ export class ChartComponent implements OnInit {
              currentYearSalesList.push(year);
             }   
           }
-          console.table(currentYearSalesCount);
+          // console.table(currentYearSalesCount);
           // end
   });
 

@@ -18,9 +18,11 @@
       <td>{{users.name}}</td>
       <td>{{users.mobileNo}}</td>
       <td>{{users.email}}</td>
-      <td>{{users.registerDate | date : "dd-MMM-yyyy hh:mm:ss a"}}</td>
+      <td>{{users.registerDate | date : "dd-MMM-yyyy hh:mm a"}}</td>
       <td>{{users.account}}</td>
-      <td><a class="badge" *ngIf="users.account === 'active'" (click)="changeUserStatus(users)" ><button class="btn btn-secondary">Deactive</button></a></td>
+      <td><a class="badge" *ngIf="users.account === 'active' || users.account === 'Active'" (click)="changeUserStatusDeactive(users)" ><button class="btn btn-danger">Deactive</button></a>
+        <a class="badge" *ngIf="users.account === 'deactive' || users.account === 'Deactive'" (click)="changeUserStatusActive(users)" ><button class="btn btn-primary">Active</button></a>
+      </td>
      </tr>
   </tbody>
 </table>

@@ -51,13 +51,13 @@ export class SalesChartComponent implements OnInit {
   constructor(private userRegisterDate : UserRegisterDateService, 
     private orderService : OrderService) 
     {
-      console.log("lastFourthDay",this.lastFourthDay);
-      console.log("threee",this.lastThirdDay);
+      // console.log("lastFourthDay",this.lastFourthDay);
+      // console.log("threee",this.lastThirdDay);
     }
 
   ngOnInit() {
     this.getOrderList();
-    console.log("yesterday", this.yesterday.substring(0,10));
+    // console.log("yesterday", this.yesterday.substring(0,10));
 
   }
 
@@ -71,6 +71,7 @@ export class SalesChartComponent implements OnInit {
 
     
     this.orderService.deliveredList().then((res: any) => {
+      // console.log("res", res);
       let row = res.records.docs;
       // console.log("data",row);
       
@@ -82,11 +83,11 @@ export class SalesChartComponent implements OnInit {
         if(item.deliveredDate.substring(0,10) === this.today.substring(0,10))
         { 
           let todaySales = item.items;     
-          // console.log("today Sales",todaySales);
+          // // console.log("today Sales",todaySales);
 
           for(let t of todaySales)
           {
-            console.log("t", t.totalPrice);
+            // console.log("t", t.totalPrice);
             this.todayTotalSaleReport += t.totalPrice;
           }
         }
@@ -95,11 +96,11 @@ export class SalesChartComponent implements OnInit {
         if(item.deliveredDate.substring(0,10) === this.yesterday.substring(0,10))
         { 
           let yesterDaySales = item.items;     
-          // console.log("today Sales",todaySales);
+          // // console.log("today Sales",todaySales);
 
           for(let t of yesterDaySales)
           {
-            console.log("y", t.totalPrice);
+            // console.log("y", t.totalPrice);
             this.yesterdayTotalSalesReport += t.totalPrice;
           }
         }
@@ -107,11 +108,11 @@ export class SalesChartComponent implements OnInit {
         if(item.deliveredDate.substring(0,10) === this.lastThirdDay.substring(0,10))
         { 
           let threeDaysBeforeSales = item.items;     
-          // console.log("today Sales",todaySales);
+          // // console.log("today Sales",todaySales);
 
           for(let t of threeDaysBeforeSales)
           {
-            console.log("3", t.totalPrice);
+            // console.log("3", t.totalPrice);
             this.threeDaysBeforeSalesReport += t.totalPrice;
           }
         }
@@ -119,11 +120,11 @@ export class SalesChartComponent implements OnInit {
         if(item.deliveredDate.substring(0,10) === this.lastFourthDay.substring(0,10))
         { 
           let fourDaysBeforeSales = item.items;     
-          // console.log("today Sales",todaySales);
+          // // console.log("today Sales",todaySales);
 
           for(let t of fourDaysBeforeSales)
           {
-            console.log("4", t.totalPrice);
+            // console.log("4", t.totalPrice);
             this.fourDaysBeforeSalesReport += t.totalPrice;
           }
         }
@@ -131,20 +132,20 @@ export class SalesChartComponent implements OnInit {
         if(item.deliveredDate.substring(0,10) === this.fiveDays.substring(0,10))
         { 
           let fiveDaysBeforeSales = item.items;     
-          // console.log("today Sales",todaySales);
+          // // console.log("today Sales",todaySales);
 
           for(let t of fiveDaysBeforeSales)
           {
-            console.log("4", t.totalPrice);
+            // console.log("4", t.totalPrice);
             this.fiveDaysBeforeSalesReport += t.totalPrice;
           }
         }
       }
-      console.log("this.todayTotalSaleReport", this.todayTotalSaleReport);
-      console.log("this.yesterdayTotalSalesReport", this.yesterdayTotalSalesReport);
-      console.log("this.threeDaysBeforeSalesReport", this.threeDaysBeforeSalesReport);
-      console.log("this.fourDaysBeforeSalesReport", this.fourDaysBeforeSalesReport);
-      console.log("this.fiveDaysBeforeSalesReport", this.fiveDaysBeforeSalesReport);
+      // console.log("this.todayTotalSaleReport", this.todayTotalSaleReport);
+      // console.log("this.yesterdayTotalSalesReport", this.yesterdayTotalSalesReport);
+      // console.log("this.threeDaysBeforeSalesReport", this.threeDaysBeforeSalesReport);
+      // console.log("this.fourDaysBeforeSalesReport", this.fourDaysBeforeSalesReport);
+      // console.log("this.fiveDaysBeforeSalesReport", this.fiveDaysBeforeSalesReport);
 
       this.barChartData = [
         {
@@ -182,16 +183,16 @@ export class SalesChartComponent implements OnInit {
 
       //   if(item.deliveredDate.substring(0,10) === this.today.substring(0,10))
       //   { 
-      //     // console.log("EEE",item.items);
+      //     // // console.log("EEE",item.items);
       //     let todaySales = item.items;     
-      //     // console.log("today Sales",todaySales);
+      //     // // console.log("today Sales",todaySales);
 
-      //     // console.log(item.items.category);
+      //     // // console.log(item.items.category);
       //     for(let i of todaySales)
       //     { 
-      //       // console.log("ooooo",i.category);
+      //       // // console.log("ooooo",i.category);
       //       let index = this.salesCategory.indexOf(i.category)            
-      //       // console.log("index", index);
+      //       // // console.log("index", index);
       //       this.todayTotalSales[index]+= i.totalPrice;
       //     }
 
@@ -208,16 +209,16 @@ export class SalesChartComponent implements OnInit {
               
       //   if(item.deliveredDate.substring(0,10) === this.yesterday.substring(0,10))
       //   { 
-      //     // console.log("EEE",item.items);
+      //     // // console.log("EEE",item.items);
       //     let todayTotalSales = item.items;     
-      //     console.log("yesterdaySales",todayTotalSales);
+      //     // console.log("yesterdaySales",todayTotalSales);
 
-      //     // console.log(item.items.category);
+      //     // // console.log(item.items.category);
       //     for(let i of todayTotalSales)
       //     { 
-      //       // console.log("ooooo",i.category);
+      //       // // console.log("ooooo",i.category);
       //       let index = this.salesCategory.indexOf(i.category)            
-      //       // console.log("index", index);
+      //       // // console.log("index", index);
       //       this.todayTotalSales[index] += i.totalPrice;
       //     }
       //   }
@@ -225,12 +226,12 @@ export class SalesChartComponent implements OnInit {
 
 
 
-      // console.log("salesCategory", this.salesCategory);
-      // console.log("todayTotalSales", this.todayTotalSales);
+      // // console.log("salesCategory", this.salesCategory);
+      // // console.log("todayTotalSales", this.todayTotalSales);
 
       // for(let k=0; k < this.todayTotalSales.length; k++)
       // { 
-      //   console.log("todayTotalSales", k);
+      //   // console.log("todayTotalSales", k);
 
       //   let a = {
       //     data: [this.todayTotalSales[k]], 
@@ -238,7 +239,7 @@ export class SalesChartComponent implements OnInit {
       //   }
       //   this.barChartData.push(a);
       // }
-      // console.log("push", this.barChartData);
+      // // console.log("push", this.barChartData);
       // this.check = true
 
       // this.todayTotalSales = [0,0,0,0,0,0,0];
@@ -252,12 +253,12 @@ export class SalesChartComponent implements OnInit {
 
 
       
-      // console.log("salesCategory", this.salesCategory);
-      // console.log("todayTotalSales", this.todayTotalSales);
+      // // console.log("salesCategory", this.salesCategory);
+      // // console.log("todayTotalSales", this.todayTotalSales);
 
       // for(let k=0; k < this.todayTotalSales.length; k++)
       // { 
-      //   console.log("todayTotalSales", k);
+      //   // console.log("todayTotalSales", k);
 
       //   let a = {
       //     data: [this.todayTotalSales[k]], 
@@ -265,7 +266,7 @@ export class SalesChartComponent implements OnInit {
       //   }
       //   this.barChartData.push(a);
       // }
-      // console.log("push", this.barChartData);
+      // // console.log("push", this.barChartData);
       // this.check = true
   });
 

@@ -124,9 +124,9 @@ export class AddProductComponent implements OnInit {
         //  ibm cloudant images attachments code end here
 
 
-          this.spinner.hide();
 
           this.toastr.success("Product added successfully");      
+          this.spinner.hide();
 
       
       }, err => {

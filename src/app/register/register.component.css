@@ -57,25 +57,25 @@ form
 label
 {
     padding-top: 10px;
-    color: #B4D233;
+    color: mediumseagreen;
 }
 .btn
 {
     border-radius: 25px;
-    background: #B4D233;
+    background: mediumseagreen;
 
 }
-img
+/* img
 {
     margin-left: 60px;
     margin-top: 0;
     margin-bottom: 0;
-}
+} */
 .form-control
 {
     border-bottom-left-radius: 15px;
     border-top-right-radius: 15px;
-    border-color: #B4D233;
+    border-color: mediumseagreen;
 }
 sup
 {

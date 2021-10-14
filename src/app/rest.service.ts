@@ -25,7 +25,7 @@ export class RestService {
 
   
   findByCriteria(collectionName:string, criteria: any) {
-    const url = environment.url + collectionName + "/_find?attachments=true";
+    const url = environment.url + collectionName + "/_find";
     const httpRequest = this.http.post( url, criteria);
     return this.promiseMethod(httpRequest);  
   }
@@ -51,7 +51,7 @@ export class RestService {
 
   updateImg(collectionName:string, data:any)
   {
-    console.log(data);
+    // console.log(data);
     const url = environment.url + collectionName + "/"+ data._id +"/image?rev="+ data._rev;
     const httpRequest =  this.http.put( url, data.image );
     return this.promiseMethod(httpRequest);  
@@ -72,7 +72,7 @@ export class RestService {
   {
     const promise = new Promise( resolve => {
       httpRequest.toPromise().then((res: any) => {
-        console.log(res);
+        // console.log(res);
         resolve(this.response("success", '', res));
       }).catch((err) => {
         resolve(this.response("failed", err.message, []));

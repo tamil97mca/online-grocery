@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
 import * as _ from 'lodash';
 import Swal from 'sweetalert2';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-remove-product',
@@ -14,7 +15,7 @@ export class RemoveProductComponent implements OnInit {
   ascProductList: any;
   selectedCategory: any;
 
-  constructor(private productService: ProductsService) 
+  constructor(private productService: ProductsService,  private spinner : NgxSpinnerService) 
   { 
     this.getAllProducts();
   }
@@ -24,7 +25,7 @@ export class RemoveProductComponent implements OnInit {
 
 
   getAllProducts() {
-
+    this.spinner.show();
     try {
       
       this.productService.getAttachmentProducts().then((res: any) => {
@@ -34,17 +35,18 @@ export class RemoveProductComponent implements OnInit {
         console.log('productList', data);
         this.ascProductList = _.orderBy(this.productList, ['category'], ['asc']);
         console.log('Ascending Product List :', this.ascProductList);
+        this.spinner.hide();
       });
 
     } catch (err) {
       console.error("error", err);
+      this.spinner.hide();
     }
   }
 
   removeProduct(id: any, rev: any) {
     
     try {
-      
       console.log('id', id);
     console.log('rev', rev);
 

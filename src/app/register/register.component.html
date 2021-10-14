@@ -8,8 +8,12 @@
   
     <form [formGroup]="registerForm" (ngSubmit)="register()">
   
-      <img src="assets/images/logo/dplogo.png" alt="logo" width="60%" height="60%">
+      <!-- <img src="assets/images/logo/dplogo.png" alt="logo" width="60%" height="60%"> -->
   
+      <div style="text-align: center">
+        <img src="assets/images/logo/games/dplogo.png" alt="logo" width="30%" height="30%">
+      </div>
+
       <div class="form-group">
         <label for="username">UserName <sup>*</sup></label>
         <input formControlName="username" class="form-control" type="text" name="username" id="username"
